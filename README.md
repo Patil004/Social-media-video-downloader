@@ -38,4 +38,27 @@ This project is intended **for educational and personal use only**.
 
 ---
 
+# 1. Clone the repository
+git clone https://github.com/Patil004/Social-media-video-downloader.git
+
+# 2. Move into the project folder
+cd Social-media-video-downloader
+
+# 3. Create a virtual environment
+python -m venv venv
+
+# 4. Activate the environment
+# For macOS/Linux:
+source venv/bin/activate
+# For Windows:
+venv\Scripts\activate
+
+# 5. Install dependencies
+pip install -r requirements.txt
+
+# 6. Run the Flask app
+python app.py
+
+
+
 
