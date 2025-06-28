@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download History</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Download History</h2>
+    <ul>
+      {% for item in history %}
+        <li><strong>{{ item.title }}</strong> – {{ item.filename }}</li>
+      {% endfor %}
+    </ul>
+    <a href="/">⬅ Back to Downloader</a>
+  </div>
+</body>
+</html>

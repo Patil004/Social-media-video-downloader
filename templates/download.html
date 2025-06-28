@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Starting download...</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="{{ url_for('static', filename='downloads.css') }}">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .wrapper {
+      padding-top: 100px;
+    }
+
+    a {
+      color: green;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: inline;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+  display: inline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+  </style>
+</head>
+
+ <footer>
+    <p>Developed by <a href="https://www.linkedin.com/in/ankit2004" target="_blank" rel="noopener noreferrer">Ankit Patil</a></p>
+  </footer>
+
+<body>
+  <div class="wrapper">
+    <h3>Your download will begin shortly...</h3>
+    <p>If it doesn't, <a href="{{ url_for('download_file', filename=filename) }}">click here</a>.</p>
+  </div>
+
+  <script>
+    window.onload = function() {
+      window.location.href = "{{ url_for('download_file', filename=filename) }}";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Downloader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  
+</head>
+<body>
+  <div class="container">
+    <h2 class ="title">Social Media Video Downloader</h2>
+    <form method="POST" action="/processing" onsubmit="showLoader()">
+      <input type="text" name="url" placeholder="Enter video URL (YouTube, Instagram, Twitter, etc.)" required>
+      <select name="quality">
+        <option value="1080">MP4 - 1080p</option>
+        <option value="720">MP4 - 720p</option>
+        <option value="480">MP4 - 480p</option>
+        <option value="audio">MP3 - Audio Only</option>
+      </select>
+      <button type="submit" id="submitBtn">Download</button>
+      <div class="loader" id="loader">
+        <div></div><div></div><div></div>
+        <p>Preparing your download...</p>
+      </div>
+    </form>
+  </div>
+  <div class="disclaimer">
+  <p>⚠️ Disclaimer: This project is developed solely for educational and demonstration purposes. It is not intended for commercial use or public deployment. The tool may interact with third-party platforms, and users are responsible for complying with their respective terms of service. The developer does not promote or encourage the downloading of copyrighted, private, or unauthorized content and assumes no responsibility for any misuse. Use this project responsibly and only for personal, non-commercial learning or testing.</p>
+  </div>
+  <footer>
+    <p>Developed by <a href="https://www.linkedin.com/in/ankit2004" target="_blank" rel="noopener noreferrer">Ankit Patil</a></p>
+  </footer>
+
+  <script>
+    function showLoader() {
+      document.getElementById("submitBtn").disabled = true;
+      document.getElementById("loader").style.display = "block";
+    }
+  </script>
+</body>
+</html>
